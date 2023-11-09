@@ -1,0 +1,38 @@
+Required Patterns:
+1. Singleton - used for object creation
+2. Observer - behavioral, what the object does
+3. Visitor - behavioral, what the object does
+4. Composite - structures , composition of classes or objects
+
+Singleton Pattern (Interview Pattern)
+- class has only one instance
+- global point of acces to the instance
+- Create instmace admin controll
+    - 
+
+Observer
+- Between users to:
+    - follow
+    - tweet
+
+Composite
+- Between user and user groups 
+    - hierarchy
+
+Visitor
+- add functionality to user groups
+    - show total number of users
+    - show total number of groups
+    - show total number of tweets message
+    - show perentage of positive tweet
+
+
+A few analysis features are needed in the admin control panel: 
+1) output the total number of users; 
+2) output the total number of groups; 
+3) output the total number of Tweet messages 
+    in all the users’ news feed; 
+4) output the percentage of the positive Tweet
+    messages in all the users’ news feed 
+    (the message containing positive words,
+     such as good, great, excellent, etc.) 
