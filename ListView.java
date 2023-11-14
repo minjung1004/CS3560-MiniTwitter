@@ -17,7 +17,7 @@ public class ListView {
 
     private ListView() {
         User root = new User();
-        root.setUserName("<root>");
+        root.setName("Root");
         userList.add(root);
     }
 
@@ -66,7 +66,7 @@ public class ListView {
     public List<String> getUserList() {
         List<String> result = new ArrayList<String>();
         for (UserComposite m: userList){
-            if(m.getName() == "<root>"){
+            if(m.getName() == "Root"){
                 result.add(m.getName());
             }else{
                 result.add("- " + m.getName());

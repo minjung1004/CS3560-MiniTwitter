@@ -8,11 +8,7 @@ public class UserSubject {
     public void attach (UserObservers observer){
         followers.add(observer);
     }
-
-    // public void detach(UserObservers observer){
-    //     followers.remove(observer);
-    // }
-
+    
     public void updateFollowers(){
         for(UserObservers observer : followers){
             observer.update(this);

@@ -17,7 +17,7 @@ public class AddUserButton implements Button{
     @Override
     public void add(String n, String group){
         User user1 = new User();
-        user1.setUserName(n);
+        user1.setName(n);
         group = group.replace(" ", "");
         group = group.replace("-", "");
         group = group.replace("<", "");

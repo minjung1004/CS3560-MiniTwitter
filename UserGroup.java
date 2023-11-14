@@ -106,47 +106,4 @@ public class UserGroup implements UserComposite{
         }
         return result;
     }
-    // private List<UserComposite> groupList = new ArrayList<UserComposite>();
-    // private String groupName;
-    // private static int count = 0;
-
-   
-    // // Instance fields
-    // private String groupId;
-    // private ArrayList<UserComposite> groupUsers;
-
-    // public UserGroup(String id){
-    //     groupId =id;
-    //     groupUsers= new ArrayList<UserComposite>();
-    // }
-
-    // public UserGroup() {
-    // }
-
-    // // Accessor Methods
-    // @Override
-    // public void setId(String id) {
-    //     groupId = id;
-    // }
-
-    // @Override
-    // public String getId() {
-    //     return groupId;
-    // }
-
-    // // Add user to a group
-    // public void addUserToGroup(User userId){
-    //     groupUsers.add(userId);
-    // }
-
-    // // Returns users in a group
-    // public ArrayList<UserComposite> getUserGroup(){
-    //     return groupUsers;
-    // }
-
-    // @Override
-    // public String toString(){
-    //     return groupId;
-    // }
-
 }

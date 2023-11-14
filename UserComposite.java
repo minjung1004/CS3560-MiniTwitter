@@ -2,10 +2,7 @@ import java.util.List;
 
 // Composite Pattern to accept vistor from visitor pattern
 public interface UserComposite {
-    // public void setId(String id);
-    // public String getId();
-    // public String toString();
-
+    
     public void clickOn();
     public String getName();
 
