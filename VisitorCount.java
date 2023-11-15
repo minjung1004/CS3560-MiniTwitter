@@ -1,3 +1,5 @@
+// Visitor Pattern
+
 public class VisitorCount implements Visitor {
 
     @Override

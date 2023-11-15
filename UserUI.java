@@ -1,3 +1,5 @@
+// Singleton Pattern
+
 import java.awt.Color;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -12,6 +14,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class UserUI {
+
     JButton Follow, postBtn;
     JTextField user, tweet;
     JPanel followList, newsFeed;
@@ -23,6 +26,7 @@ public class UserUI {
     DefaultListModel<Object> model2 = new DefaultListModel<>();
     User thiUser;
     
+    // Open user window
     UserUI(User u){
         thiUser = u;
         userWindow = new JFrame(u.getName() + "'s View");

@@ -1,6 +1,9 @@
+// Singleton Pattern
+
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
+
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
@@ -8,7 +11,6 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-
 
 public class AdminControlPanel extends JFrame implements ActionListener{
 
@@ -185,7 +187,7 @@ public class AdminControlPanel extends JFrame implements ActionListener{
         popUpWindow("Group Total", "Total Group: ", groupCount);
       }
       else if(e.getSource() == TweetTotal){
-        count = view.acceptMessage(visitor);
+        count = news.acceptMessage(visitor);
         popUpWindow("Tweet Total", "Total Tweets: ", count);
       }
       else if(e.getSource() == PositiveTweet){

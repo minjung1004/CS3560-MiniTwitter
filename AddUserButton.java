@@ -1,3 +1,5 @@
+// Singleton Pattern
+
 public class AddUserButton implements Button{
     private static AddUserButton instance;
     private ListView view;

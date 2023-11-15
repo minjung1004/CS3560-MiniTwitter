@@ -1,3 +1,4 @@
+// Composite Pattern
 import java.util.*;
 
 public class UserGroup implements UserComposite{
@@ -18,9 +19,7 @@ public class UserGroup implements UserComposite{
 
     public void setName(String name){
         this.groupName = name;
-        if ( !groupName.equals("Current Following: ")){
-            System.out.println(groupName + " has been created ");
-        }
+        System.out.println(groupName + " has been created ");
     }
 
     @Override

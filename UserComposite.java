@@ -1,6 +1,7 @@
+// Composite Pattern to accept vistor from visitor pattern
+
 import java.util.List;
 
-// Composite Pattern to accept vistor from visitor pattern
 public interface UserComposite {
     
     public void clickOn();

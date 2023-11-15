@@ -5,26 +5,21 @@ Required Patterns:
 4. Composite - structures , composition of classes or objects
 
 Singleton Pattern (Interview Pattern)
-- class has only one instance
-- global point of acces to the instance
-- Create instmace admin controll
-    - 
+- Used to create AdminControlPanel GUI and  User View GUI
 
-Observer
-- Between users to:
-    - follow
-    - tweet
+Observer Pattern
+- used to track and update followers
+- used update tweets messages
 
-Composite
-- Between user and user groups 
-    - hierarchy
+Composite Pattern
+- Used in user and user groups to keep hierarchy in ListView
 
-Visitor
+Visitor Pattern
 - add functionality to user groups
-    - show total number of users
-    - show total number of groups
-    - show total number of tweets message
-    - show perentage of positive tweet
+- show total number of users
+- show total number of groups
+- show total number of tweets message
+- show perentage of positive tweet
 
 
 A few analysis features are needed in the admin control panel: 
