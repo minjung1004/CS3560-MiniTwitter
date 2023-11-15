@@ -69,7 +69,7 @@ public class NewsFeed extends UserSubject {
 
     public float getPercentangePositiveMessages(){
         float positiveMessages = 0;
-        float percentangePositiveMessage = 0;
+        // float percentangePositiveMessage = 0;
         
         for(String s: messages){
             if( s.toLowerCase().contains("good") ||
@@ -80,9 +80,10 @@ public class NewsFeed extends UserSubject {
                 positiveMessages++;
             }
         }
-        percentangePositiveMessage = positiveMessages/(float)getCountMessages() * 100;
+        //percentangePositiveMessage = positiveMessages/3;
+        // (float)getCountMessages();
         
-        return percentangePositiveMessage; 
+        return positiveMessages/(float)getCountMessages(); 
     }
 
     public int acceptMessage(Visitor visitor){

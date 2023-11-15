@@ -191,7 +191,7 @@ public class AdminControlPanel extends JFrame implements ActionListener{
         popUpWindow("Tweet Total", "Total Tweets: ", count);
       }
       else if(e.getSource() == PositiveTweet){
-        positiveTweets = news.acceptMessage(visitor);
+        positiveTweets = news.acceptPositiveMessage(visitor);
         popUpWindow("Positive Tweet Total", "Positive Tweet Percentage: ", positiveTweets + "%");
       }
     }

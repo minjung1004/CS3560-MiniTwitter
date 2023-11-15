@@ -19,7 +19,7 @@ public class VisitorCount implements Visitor {
 
     @Override
     public float visitPositiveMessage(NewsFeed news) {
-       return news.getPercentangePositiveMessages();
+       return news.getPercentangePositiveMessages() * 100;
     }
     
 }
