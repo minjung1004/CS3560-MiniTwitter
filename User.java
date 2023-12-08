@@ -12,6 +12,7 @@ public class User implements UserComposite, UserObservers{
     private String userName;
     private List<User> followings = new ArrayList<User>();
     private List<User> followers = new ArrayList<User>();
+    private long creationTime = 0;
 
     @Override
     public void clickOn() {
@@ -20,9 +21,14 @@ public class User implements UserComposite, UserObservers{
 
     public void setName(String name) {
         this.userName = name;
+        creationTime = System.currentTimeMillis();
         if ( !userName.equals("Current Following: ")){
-            System.out.println(userName + " has been created ");
+            System.out.println(name + " has been created on " + creationTime);
         }
+    }
+
+    public String getcreationTime() {
+        return String.valueOf(creationTime);
     }
     
     @Override

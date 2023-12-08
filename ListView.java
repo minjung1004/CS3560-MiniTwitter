@@ -5,8 +5,10 @@ import java.util.ArrayList;
 
 public class ListView {
     private List<UserComposite> userList = new ArrayList<UserComposite>();
+    private List<String> idList = new ArrayList<String>();
     private int userCount = 0;
     private int groupCount = 0;
+    private boolean valid = true;
 
     private static ListView instance;
 
@@ -21,6 +23,28 @@ public class ListView {
         User root = new User();
         root.setName("Root");
         userList.add(root);
+    }
+
+    public void validateCheck(String id){
+        if (!valid) {
+            return;
+        }
+        if (id.contains(" "))
+        {
+            valid = false;
+            return;
+        }
+        if (idList.contains(id)){
+            valid = false;
+            return;
+        }
+        idList.add(id);
+    }
+    public String getValidate(){
+        if(valid){
+            return "ID Valid :)";
+        }
+        return "Not a  valid ID :(";
     }
 
     public UserComposite findGroup(String group){

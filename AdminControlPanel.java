@@ -16,7 +16,7 @@ public class AdminControlPanel extends JFrame implements ActionListener{
 
     private JFrame admin = new JFrame("Admin Control Panel");
     private JPanel treeView;
-    private JButton AddUser, AddGroup, UserView, UserTotal, GroupTotal, TweetTotal, PositiveTweet;
+    private JButton AddUser, AddGroup, UserView, UserTotal, GroupTotal, TweetTotal, PositiveTweet, ValidateId, update;
     private JTextField user, group;
     private JLabel tvText;
     private String clickOn = "Root";
@@ -73,6 +73,7 @@ public class AdminControlPanel extends JFrame implements ActionListener{
             public void mouseClicked(MouseEvent mouseEvent) {
                 if(!(user.getText().equals(""))){
                     userBtn.add(user.getText(), clickOn);
+                    view.validateCheck(user.getText());
                     user.setText("");
                     refreshTreeView();
                     clickOn = "<root>";
@@ -98,6 +99,7 @@ public class AdminControlPanel extends JFrame implements ActionListener{
             public void mouseClicked(MouseEvent mouseEvent) {
                 if(!(group.getText().equals(""))){
                     groupBtn.add(group.getText(), clickOn);
+                    view.validateCheck(group.getText());
                     group.setText("");
                     refreshTreeView();
                     clickOn = "<root>";
@@ -114,6 +116,18 @@ public class AdminControlPanel extends JFrame implements ActionListener{
         UserView.addActionListener(this);
         UserView.setFocusable(false);
         admin.add(UserView);
+
+        ValidateId = new JButton("Validate IDs");
+        ValidateId.setBounds(450, 340, 200, 50);
+        ValidateId.addActionListener(this);
+        ValidateId.setFocusable(false);
+        admin.add( ValidateId);
+   
+        update = new JButton("Last Updated User");
+        update.setBounds(650, 340, 200, 50);
+        update.addActionListener(this);
+        update.setFocusable(false);
+        admin.add(update);
 
         // User Total
         UserTotal = new JButton("User Total");
@@ -194,8 +208,16 @@ public class AdminControlPanel extends JFrame implements ActionListener{
         positiveTweets = news.acceptPositiveMessage(visitor);
         popUpWindow("Positive Tweet Total", "Positive Tweet Percentage: ", positiveTweets + "%");
       }
-    }
+      else if (e.getSource() == ValidateId){
+ 	    System.out.println(view.getValidate());
+ 	    popUpWindow("Validate Check", view.getValidate(), "");
+ 	  }
 
+      else if (e.getSource() == update){
+ 	    popUpWindow("Last updated user", "Last updated user: ", news.getUpdateId());
+ 	  }
+    }
+    
 
     private void popUpWindow(String name, String msg, Object count) {
         JFrame frame = new JFrame(name);

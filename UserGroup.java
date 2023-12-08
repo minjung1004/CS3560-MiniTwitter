@@ -6,6 +6,7 @@ public class UserGroup implements UserComposite{
     private String groupName;
     private List<UserComposite> userList = new ArrayList<>();
     private static int CountGroup = 0;
+    private long creationTime = 0;
 
     @Override
     public void clickOn() {
@@ -19,7 +20,13 @@ public class UserGroup implements UserComposite{
 
     public void setName(String name){
         this.groupName = name;
-        System.out.println(groupName + " has been created ");
+        creationTime = System.currentTimeMillis();
+        System.out.println(groupName + " has been created at " + creationTime);
+
+    }
+
+    public String getCreationTime() {
+        return String.valueOf(creationTime);
     }
 
     @Override

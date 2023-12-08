@@ -13,8 +13,8 @@ public class NewsFeed extends UserSubject {
 
     private NewsFeed(){}
 
-    private List<String> senders = new ArrayList<>();
-    private List<String> messages = new ArrayList<>();
+    private List<String> senders = new ArrayList<String>();
+    private List<String> messages = new ArrayList<String>();
     private String lastUser;
 
     public List<String> getSenders() {
@@ -42,11 +42,11 @@ public class NewsFeed extends UserSubject {
         for (int i = 0; i <followers.size(); i++) {
             System.out.println(", " + followers.get(i).getName());  
         }
-        System.out.println("news feed has been updateds");
+        System.out.println("News feed has been updated.");
         lastUser = u.getName();
     }
 
-    public String getLastUser() {
+    public String getUpdateId() {
         return lastUser;
     }
 
